@@ -1,7 +1,7 @@
 # Prédiction de prix intraday — AAPL
 
 Projet réalisé dans le cadre du cours GFN 260 (Machine Learning en Assurance et Finance)
-CNAM / ESSEC — 2025-2026
+CNAM 2026
 Yannis Khalfi & Branko Markovic
 
 ## Description
@@ -33,3 +33,8 @@ streamlit run 2_AAPL_pipeline/streamlit_app.py
 
 Récupérées automatiquement via yfinance au lancement du script (AAPL, 60 jours, 5 minutes).
 Les données LVMH proviennent de la base Euronext BEDOFIH (accès restreint).
+
+## NB
+
+La clé API pour Anthropic a été volontairement retiré suite aux restrictions de github pour 
+push le code. Vous pouvez ajouter la votre pour faire fonctionner l'IA Gen.
