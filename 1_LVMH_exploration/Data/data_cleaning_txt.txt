@@ -1,0 +1,18 @@
+import pandas as pd
+df = pd.read_csv("D:/KC\Master/2026/GFN 260/Intraday price prediction/Data/Processed/LVMH tick price 2024.csv", sep=';')
+df['Trading Date Time'] = pd.to_datetime(df['Trading Date Time'])
+
+df = df.set_index('Trading Date Time')
+df_5min = df.resample('5min').agg({ 
+    'Price': ['first', 'max', 'min', 'last'],
+    'Volume': 'sum'
+})
+df_5min = df_5min.dropna()
+
+df_5min.columns = ['Open', 'High', 'Low', 'Close', 'Volume']
+df_5min = df_5min.dropna()
+
+print(f"Ticks chargés : {len(df):,}")
+print(f"Période : {df.index.min()} → {df.index.max()}")
+print(df_5min.head())
+print(f"Bougies 5min : {len(df_5min)}")
