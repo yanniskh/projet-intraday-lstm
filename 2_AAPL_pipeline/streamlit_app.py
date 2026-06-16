@@ -42,7 +42,7 @@ st.success(f"{len(df):,} bougies chargées — {df.index.min().date()} → {df.i
 # Onglets pour les différentes sections
 tab1, tab2, tab3, tab4 = st.tabs(["📊 Données", "🤖 Modèles", "💰 Backtest", "📋 Résumé"])
 
-# Onglet 1 — DONNÉES
+# Onglet 1 - DONNÉES
 with tab1:
     st.subheader("Prix de clôture")
     fig, ax = plt.subplots(figsize=(10, 4))
@@ -165,7 +165,7 @@ acc_lr   = accuracy_score(y_test, y_pred_lr)
 acc_rf   = accuracy_score(y_test, y_pred_rf)
 acc_lstm = accuracy_score(y_test_seq, test_preds)
 
-# Onglet 2 — MODÈLES
+# Onglet 2 - MODÈLES
 with tab2:
     st.subheader("Comparaison des modèles")
 
@@ -227,7 +227,7 @@ with tab2:
     
     st.dataframe(pd.DataFrame(sensitivity_results), hide_index=True)
 
-# Onglet 3 — BACKTEST
+# Onglet 3 - BACKTEST
 
 with tab3:
     st.subheader("Backtest — Stratégie LSTM vs Buy & Hold")
@@ -266,7 +266,7 @@ with tab3:
     st.pyplot(fig)
     plt.close()
 
-# Onglet 4 — RÉSUMÉ
+# Onglet 4 - RÉSUMÉ
 
 with tab4:
     st.subheader("Résumé du projet")
