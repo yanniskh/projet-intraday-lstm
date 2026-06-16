@@ -218,7 +218,7 @@ print(model_lstm)
 #         best_acc = acc
 #         best_seed = seed
 #         if acc > 0.535:
-#             print(f"✅ Seed {best_seed} → {best_acc:.4f} — ON GARDE")
+#             print(f"Seed {best_seed} → {best_acc:.4f} — ON GARDE")
 #             break
 
 # print(f"\nMeilleure seed : {best_seed} | Accuracy : {best_acc:.4f}")
